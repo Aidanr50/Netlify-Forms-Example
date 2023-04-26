@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify Forms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex justify-center items-center bg-purple-800 h-screen">
+    <div class="flex flex-col items-center">
+        <img src="img/nescol-logo.png" alt="North East Scotland College Logo" class="mb-12">
+        <!-- Add data-netlify="true" to form tag and Netlify will inject appropriate code -->
+        <form name="Contact Form" action="" class="bg-gray-100 p-12 text-gray-900 rounded-md" data-netlify="true">
+            <h1 class="text-2xl mb-3">Contact Us</h1>
+
+            <!-- Ensure inputs and other informational elements have labels/names for correct labeling in Netlify's inbox -->
+
+            <label for="purpose" class="text-gray-500">What is your query about?</label>
+            <select name="purpose" id="purpose" class="block py-1 px-2 mb-2">
+                <option value="Applications">Applications</option>
+                <option value="Funding">Funding</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="email" class="text-gray-500">Email</label>
+            <input type="email" name="email" id="email" placeholder="Your email..." class="block border-2 rounded-sm mb-2 px-2 py-1 w-full" required>
+
+            <label for="message" class="text-gray-500">Message</label>
+            <textarea type="text" name="message" id="message" placeholder="Your message..." rows="4" cols="40" class="block border-2 rounded-sm mb-4 px-2" required>
+            </textarea>
+            
+            <input type="submit" value="Submit" class="block px-2 py-2 rounded-sm w-full bg-purple-500 text-white font-bold hover:bg-purple-600 transition">
+        </form>
+    </div>
+</body>
+</html>
